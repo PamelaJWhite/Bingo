@@ -1,0 +1,25 @@
+body {
+  background-color: aquamarine;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+main {
+  border: 1px solid purple;
+  display: flex;
+  justify-content: center;
+  /* width: 100vw; */
+}
+
+table {
+  border: 1px solid green;
+  width: 98vw;
+  height: 98vw;
+}
+
+td {
+  border: 1px solid grey;
+}
