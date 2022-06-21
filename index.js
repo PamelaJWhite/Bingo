@@ -1,7 +1,4 @@
 console.log("up and running")
-//---------imports-----------
-//Import axios for api call
-// import axios from "axios";
 
 //--------global variables--------
 
@@ -12,92 +9,79 @@ let baseWordArray = ["red", "orange", "yellow", "green", "blue", "turquoise", "m
 //with multiple users, they're going to need their OWN array, 
 //not one array that everyone works from 
 let newArray = []
-
+// fitty('#new')
 //------------- calls to db/ backend------------
-//get the ffblist from the db 
-//using axios
-const getList = () => {
-  console.log("in getList()")
-  //axios get call for all titles, including token in header for authorization
-  axios.get(url + `/`)
-  .then((res)=> {
-      console.log("made axios call!")
-      //loop over res.data
-      for(let i= 0; i< res.data.length; i++){
-        //put each phrase in phraseArray
-        newArray.push(res.data[i].phrase)
-      }
-  })
-  .then(()=>{
-    makeRandomArray()
-  
-    //loop 25 times
-    for (let i = 0; i<=23; i++){
-      //grab each box by id, set it's innerHTML to the word at the index i
-      document.getElementById(i).innerHTML = newArray[i];
-    }
-  }
-    
-  )
+//using fetch
+const getList = () =>{
+  fetch(url)
+  .then(response => response.json())
+  .then((data) => {
+    console.log("data in fetch:", data)
+    let foundData = data
+    makeRandomArray(foundData)
+  });
 }
 
+getList()
+//------------END calls to db/ backend
 
 //I am so effing proud of myself
 //i looked up more than half a dozen ways to shuffle an array, make a random array, etc.
 //and then I just came up with this, on my own, which fits my purposes
-const makeRandomArray = () => {
+const makeRandomArray = (data) => {
   //make a copy of the baseWordArray
   // let copiedArray = [...baseWordArray]
+  newArray = []
 
-  //make a copy of the baseWordArray
-  let copiedArray = [...baseWordArray]
-
-
-  //loop 25 times
+  //loop 24 times
   for (let i = 0; i<=23; i++){
+    
     //get a random number between 0 and length of copiedArray
-    let newNum = Math.floor(Math.random() * copiedArray.length)
+    let newNum = Math.floor(Math.random() * data.length)
+    // console.log("newNum: ", newNum)
 
     //get the word at the index of newNum
-    transferredWord = copiedArray.slice(newNum, newNum+1)
+    let transferredWord = data.slice(newNum, newNum+1)
+    // console.log("transferredWord: ", transferredWord) 
 
     //put that transferredWord into the newArray
     newArray.push(transferredWord[0])
+    // console.log("newArray after push transferredWord: ", newArray)
 
-    //take the word out of the copiedArray
-    copiedArray.splice(newNum, 1)
+    //take the word out of the data
+    data.splice(newNum, 1)
+    // console.log("data after splice: ", data)
+
+    //create a new h3 element
+    let textElement = document.createElement("h3")
+
+    //add the newArray[i].phrase to that element's innerhtml
+    textElement.innerHTML = newArray[i].phrase
+    // console.log("textElement: ", textElement)
+
+    //add a class to the textElement
+    textElement.classList.add('phraseText')
+
+    // //grab each box by id, set it's innerHTML to the new element
+    document.getElementById(i).appendChild(textElement)
   }
-  return newArray
 }
 
 const reset = () => {
   console.log("clicked reset")
 
   getList()
-
-  newArray = []
-
-  // makeRandomArray()
-  
-  // //loop 25 times
-  // for (let i = 0; i<=23; i++){
-  //   //grab each box by id, set it's innerHTML to the word at the index i
-  //   document.getElementById(i).innerHTML = newArray[i];
-  // }
 }
 
 const markCell = (event) =>{
-  console.log("event.currentTarget.id: ", event.currentTarget.id)
+  
   let currentId = event.currentTarget.id
-  console.log("currentId: ", currentId)
+ 
   let currentElement = event.currentTarget
-  console.log("currentElement: ", currentElement)
+  
   //if the innerHTML = x
   //then make it the word where the id equals the index
   //else make it X
-  currentElement.innerHTML === "X" ? currentElement.innerHTML = newArray[currentId] : currentElement.innerHTML = "X"
-  // console.log()
-  
-  
-  
+  currentElement.innerHTML === "X" ? currentElement.innerHTML = newArray[currentId].phrase : currentElement.innerHTML = "X"
+ 
 }

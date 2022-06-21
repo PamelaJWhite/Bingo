@@ -1,38 +1,66 @@
 body {
   background-color: aquamarine;
+  font-family: 'Jockey One', sans-serif;
 }
 
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.boardCont {
   border: 1px solid purple;
-  /* display: flex; */
-  width: 80vmin;
-  height: 80vmin;
-  /* position: relative; */
+  /* width: 85vmin;
+  height: 85vmin; */
 }
 
 
 .gameBoard {
-  border: 1px solid blue;
+  /* border: 1px solid blue;x */
   display: flex;
   flex-direction: column;
-  height: 100%;
- 
+  
 }
 
 .row {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   width: 100%;
   height: 100%;
 
 }
-.cell {
+.outerCell {
   border: 1px solid grey;
+  /* these need an absolute height 
+  so the innerCells can be 100% and stay square*/
+  width: 16vmin;
+  height: 16vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cell {
+  /* border: 1px solid pink; */
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 5px;
+  margin-top: 5px;
+  /* this can be vmin, bc each box is vmin
+  so they'll change at the same rate */
+  font-size: 3.5vmin;
 }
+
+.phraseText{
+  font-size: 3.5vmin;
+}
+
