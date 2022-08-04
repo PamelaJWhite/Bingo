@@ -1,11 +1,49 @@
 body {
-  background-color: aquamarine;
+  background-color: black;
   font-family: 'Jockey One', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
+
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  font-size: 36px;
+  width: 80vmin;
+  align-items: center;
+}
+.navSpacer{
+  width: 75px;
+}
+
+.titleCont {
+  position: relative;
+  color: rgb(245, 245, 245);
+  font-size: 45px;
+  font-family: 'Alfa Slab One', cursive;
+
+
+}
+.titleSpan{
+  height: 52%;
+  position: absolute;
+  color: white;
+  overflow: hidden;
+  font-family: 'Arvo', serif;font-family: 'Alfa Slab One', cursive;
+}
+.reset {
+  grid-column: 3/4;
+  width: 75px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding-right: 5px;
+  
+
 }
 
 main {
@@ -14,29 +52,20 @@ main {
   align-items: center; 
 }
 
-.boardCont {
-  border: 1px solid purple;
-  /* width: 85vmin;
-  height: 85vmin; */
-}
-
-
 .gameBoard {
-  /* border: 1px solid blue;x */
+
   display: flex;
   flex-direction: column;
-  
 }
 
 .row {
-  /* border: 1px solid green; */
   display: flex;
   width: 100%;
   height: 100%;
+  color: white;
 
 }
 .outerCell {
-  border: 1px solid grey;
   /* these need an absolute height 
   so the innerCells can be 100% and stay square*/
   width: 16vmin;
@@ -44,23 +73,47 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
+  margin-left: 10px;
+
 }
 .cell {
-  /* border: 1px solid pink; */
+
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 5px;
-  margin-top: 5px;
   /* this can be vmin, bc each box is vmin
   so they'll change at the same rate */
-  font-size: 3.5vmin;
+  font-size: 3.0vmin;
 }
 
 .phraseText{
-  font-size: 3.5vmin;
+  /* font-size: 3.5vmin; */
+  padding:3px;
 }
+
+.quote {
+  background-color: #42ab4f;
+  color: white;
+  border: 2px solid white;
+}
+
+.drop {
+  background-color: white;
+  color: #42ab4f;
+  border: 2px solid #42ab4f;
+}
+
+.xClass {
+  font-size: .1px;
+  background-image: url("football45deg.png");
+  background-size: 16vmin, 16vmin;
+  color: rgba(0, 0, 0, 0.0)
+}
+
+
+
 

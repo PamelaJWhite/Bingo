@@ -5,18 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@700&family=Anton&family=Jockey+One&family=Teko:wght@600&display=swap" rel="stylesheet">
-  <title>Ballers' Bingo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo:wght@700&family=Jockey+One&display=swap" rel="stylesheet">
+<title>Ballers' Bingo</title>
 </head>
 <body>
   <nav>
-    <h1 class="title">BALLERS' BINGO</h1>
-    
+    <div class="navSpacer"></div>
+    <div class="titleCont">
+      <span class="titleSpan">BALLERS' BINGO</span>
+      BALLERS' BINGO
+    </div>
+    <button class="reset" onclick="reset()">
+      Reset
+    </button>
   </nav>
   <main>
+    
     <div class="boardCont">
     <div class="gameBoard">
         <div class="row">
@@ -58,9 +64,7 @@
         </div>
     </div>       
   </div>
-  <button onclick="reset()">
-    Reset
-  </button>
+  
   
 </main>
   
