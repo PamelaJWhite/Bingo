@@ -50,7 +50,7 @@ const getList = () => {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(" data in fetch:", data);
+      console.log("data in fetch:", data);
       let foundData = data;
       makeRandomArray(foundData)
     });
