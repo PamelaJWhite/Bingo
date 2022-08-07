@@ -68,7 +68,7 @@ const assignTypeClass = (newArray)=> {
     // grab the current HTML element
     //bc they're in numeric order, their id and index are equivalent
     currentEl = document.getElementById(i)
-    console.log("currentEl: ", currentEl)
+    // console.log("currentEl: ", currentEl)
     if(array[i].type == 'quote'){
       // console.log("quote: ", array[i].type)
       currentEl.classList.add("quote")
@@ -77,8 +77,20 @@ const assignTypeClass = (newArray)=> {
       // console.log("drop: ", array[i].type)
       currentEl.classList.add("drop")
     }
-    if(array[i.type =='sound']){
+    if(array[i].type =='sound'){
       currentEl.classList.add("sound")
+    }
+    if(array[i].phrase == "#notasponsor"){
+      currentEl.classList.add("supersmall")
+      console.log(array[i].phrase, "#notasponsor")
+    }
+    if(array[i].phrase == "your friendly, neighborhood wizard"){
+      console.log(array[i].phrase, "wizard")
+      currentEl.classList.add("supersmall")
+    }
+    if(array[i].phrase == "Jared Garff announcement bugle"){
+      console.log(array[i].phrase, "garff")
+      currentEl.classList.add("supersmall")
     }
   }
 }
@@ -88,7 +100,6 @@ const assignTypeClass = (newArray)=> {
 // //and then I just came up with this, on my own, which fits my purposes
 const makeRandomArray = (data) => {
     
-
     //loop 24 times
     for (let i = 0; i <= 23; i++) {
       //get a random number between 0 and length of copiedArray

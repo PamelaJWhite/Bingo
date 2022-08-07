@@ -131,6 +131,7 @@ main {
   main {
     margin-left: -10px;
   }
+
   .titleCont {
     margin-bottom: 5px;
   }
@@ -157,6 +158,11 @@ main {
     background-color: white;
     color: #42ab4f;
     border: 1px solid #42ab4f;
+  }
+
+  .supersmall{
+    font-size: 2.2vmin;
+    /* color: purple; */
   }
   /* 
   .titleContSm{
