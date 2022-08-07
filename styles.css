@@ -141,8 +141,8 @@ main {
   .outerCell {
     /* these need an absolute height 
     so the innerCells can be 100% and stay square*/
-    width: 16vmin;
-    height: 16vmin;
+    width: 17vmin;
+    height: 17vmin;
     margin-bottom: 7px;
     margin-left: 7px;
   
