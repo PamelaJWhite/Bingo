@@ -10,7 +10,6 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  font-size: 36px;
   width: 80vmin;
   align-items: center;
 }
@@ -21,10 +20,8 @@ nav {
 .titleCont {
   position: relative;
   color: rgb(245, 245, 245);
-  font-size: 45px;
+  font-size: 40px;
   font-family: 'Alfa Slab One', cursive;
-
-
 }
 .titleSpan{
   height: 52%;
@@ -42,8 +39,6 @@ nav {
   border: 2px solid white;
   border-radius: 5px;
   padding-right: 5px;
-  
-
 }
 
 main {
@@ -53,7 +48,6 @@ main {
 }
 
 .gameBoard {
-
   display: flex;
   flex-direction: column;
 }
@@ -78,7 +72,6 @@ main {
 
 }
 .cell {
-
   width: 100%;
   height: 100%;
   display: flex;
@@ -87,9 +80,12 @@ main {
   text-align: center;
   /* this can be vmin, bc each box is vmin
   so they'll change at the same rate */
-  font-size: 3.0vmin;
+  font-size: 2.5vmin;
 }
 
+.middleText{
+  font-size: 25px;
+}
 .phraseText{
   /* font-size: 3.5vmin; */
   padding:3px;
