@@ -69,15 +69,15 @@ const assignTypeClass = (newArray)=> {
     //bc they're in numeric order, their id and index are equivalent
     currentEl = document.getElementById(i)
     console.log("currentEl: ", currentEl)
-    if(array[i].type == '"quote"'){
+    if(array[i].type == 'quote'){
       // console.log("quote: ", array[i].type)
       currentEl.classList.add("quote")
     }
-    if(array[i].type =='"drop"'){
+    if(array[i].type =='drop'){
       // console.log("drop: ", array[i].type)
       currentEl.classList.add("drop")
     }
-    if(array[i.type =='"sound"']){
+    if(array[i.type =='sound']){
       currentEl.classList.add("sound")
     }
   }
