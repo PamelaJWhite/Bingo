@@ -1,78 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo:wght@700&family=Jockey+One&display=swap" rel="stylesheet">
-<title>Ballers' Bingo</title>
-</head>
-<body>
-  <nav>
-    <div class="navSpacer"></div>
-    <div class="titleCont">
-      <span class="titleSpan">BALLERS' BINGO</span>
-      BALLERS' BINGO
-    </div>
-    <button class="reset" onclick="reset()">
-      Reset
-    </button>
-  </nav>
-  <main>
-    
-    <div class="boardCont">
-    <div class="gameBoard">
-        <div class="row">
-          <div class="outerCell"> <div id="0" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"> <div id="1" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"> <div id="2"class="cell" onclick="markCell(event)"></div> </div>
-          <div class="outerCell"> <div id="3" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"> <div id="4" class="cell" onclick="markCell(event)"></div></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo:wght@700&family=Jockey+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ballers' Bingo</title>
+  </head>
+  <body>
+    <nav>
+      <div class="navSpacer"></div>
+      <div class="titleCont">
+        <span class="titleSpan">BALLERS' BINGO</span>
+        BALLERS' BINGO
+      </div>
+      <button class="reset" onclick="reset()">Reset</button>
+    </nav>
+    <main>
+      <div class="boardCont">
+        <div class="gameBoard">
+          <div class="row">
+            <div class="outerCell">
+              <div id="0" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="1" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="2" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="3" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="4" class="cell" onclick="markCell(event)"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="outerCell">
+              <div id="5" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="6" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="7" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="8" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="9" class="cell" onclick="markCell(event)"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="outerCell">
+              <div id="10" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="11" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="middle" class="cell" onclick="markCell(event)">
+                <h3>Andy, Mike, & Jason</h3>
+              </div>
+            </div>
+            <div class="outerCell">
+              <div id="12" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="13" class="cell" onclick="markCell(event)"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="outerCell">
+              <div id="14" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="15" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="16" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="17" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="18" class="cell" onclick="markCell(event)"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="outerCell">
+              <div id="19" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="20" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="21" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="22" class="cell" onclick="markCell(event)"></div>
+            </div>
+            <div class="outerCell">
+              <div id="23" class="cell" onclick="markCell(event)"></div>
+            </div>
+          </div>
         </div>
-        <div class="row">
-          <div class="outerCell"><div id="5" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="6" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="7"class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="8" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="9" class="cell" onclick="markCell(event)"></div></div>
-        </div>
-        <div class="row">
-          <div class="outerCell"><div id="10" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="11" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="middle"class="cell" onclick="markCell(event)">
-            <h3>Andy, Mike, & Jason</h3>
-          </div></div>
-          <div class="outerCell"><div id="12" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="13" class="cell" onclick="markCell(event)"></div></div>
-        </div>
-        <div class="row">
-          <div class="outerCell"><div id="14" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="15" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="16"class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="17" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="18" class="cell" onclick="markCell(event)"></div></div>
-        </div>
-        <div class="row">
-          <div class="outerCell"><div id="19" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="20" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="21" class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="22"class="cell" onclick="markCell(event)"></div></div>
-          <div class="outerCell"><div id="23" class="cell" onclick="markCell(event)"></div></div>
-        </div>
-    </div>       
-  </div>
-  
-  
-</main>
-  
-</body>
-<!-- <script src="/path/to/textFit.min.js"></script>-->
-<script src="fitty.min.js"></script>
-<script >
-  fitty('#newOuter');
-</script>
-<script src="index.js"></script>
+      </div>
+    </main>
+  </body>
+  <script src="main.js"></script>
 </html>
