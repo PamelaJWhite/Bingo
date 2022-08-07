@@ -2,7 +2,9 @@ console.log("up and running");
 
 //--------global variables--------
 
-let url = "http://localhost:4005";
+// let url = "http://localhost:4004";
+let url = "https://bingo-back.herokuapp.com"
+// let url= "https://pjw1.herokuapp.com"
 // let url = 'https://randomuser.me/api?results=25'
 
 let baseWordArray = [
