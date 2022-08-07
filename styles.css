@@ -137,8 +137,30 @@ main {
   .titleCont{
     margin-bottom: 5px;
   }
+
+  .outerCell {
+    /* these need an absolute height 
+    so the innerCells can be 100% and stay square*/
+    width: 16vmin;
+    height: 16vmin;
+    margin-bottom: 7px;
+    margin-left: 7px;
+  
+  }
   .phraseText{
     /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif */
+  }
+
+  .quote {
+    background-color: #42ab4f;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .drop {
+    background-color: white;
+    color: #42ab4f;
+    border: 1px solid #42ab4f;
   }
 /* 
   .titleContSm{
