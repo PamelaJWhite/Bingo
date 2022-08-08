@@ -14,26 +14,22 @@
     <title>Ballers' Bingo</title>
   </head>
   <body>
-    <nav>
+    <nav id="nav">
       <div class="navSpacer"></div>
-      
+
       <div class="titleCont">
         <span class="titleSpan">BALLERS' BINGO</span>
         BALLERS' BINGO
       </div>
 
       <div class="titleContSm">
-        <div class="titleTop titleSm">
-          BALLERS'
-        </div>
-        <div class="titleBottom titleSm">
-          BINGO
-        </div>
+        <div class="titleTop titleSm">BALLERS'</div>
+        <div class="titleBottom titleSm">BINGO</div>
       </div>
-      
+
       <button class="reset" onclick="reset()">Reset</button>
     </nav>
-    <main>
+    <main id="main">
       <div class="boardCont">
         <div class="gameBoard">
           <div class="row">
@@ -79,7 +75,9 @@
             </div>
             <div class="outerCell">
               <div id="middle" class="cell" onclick="markCell(event)">
-                <h3 id="middleText" class="middleText">Andy Holloway, Jason Moore, & Mike Wright</h3>
+                <h3 id="middleText" class="middleText">
+                  Andy Holloway, Jason Moore, & Mike Wright
+                </h3>
               </div>
             </div>
             <div class="outerCell">
@@ -126,6 +124,21 @@
         </div>
       </div>
     </main>
+    <div id="modalCont" class="modalCont">
+      <div id="winnerModal" class="winnerModal">
+        <h1 id="bingoText" class="bingoText">BINGO!</h1>
+        <div class="buttonBox">
+          <button class="whoopsButton winButton" onclick="returnToGame()">
+            <img class="buttonIcon" src="baller-x.svg" onclick="returnToGame()"/>
+            <div class="buttonText" onclick="returnToGame()">Oops, that wasn't a bingo</div>
+          </button>
+          <button class="playAgainButton winButton" onclick="reset()">
+            <img class="buttonIcon" src="ballers-check.svg" onclick="reset()"/>
+            <div class="buttonText" onclick="reset()">Woohoo! Let's play again!</div>
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="main.js"></script>
 </html>
